@@ -4,16 +4,22 @@ export default {
   // api 为空则使用 data 静态数据
   data: [
     {
-      "name": "韩小韩博客",
-      "link": "https://www.vvhan.com",
-      "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1655466387&s=640",
-      "descr": "运气是计划之外的东西."
+      "name": "荒野菲克",
+      "link": "https://ficor.net",
+      "avatar": "https://img.ficor.net/uploads/2025/11/691448c231589.webp",
+      "descr": "在路上的思绪与脚印"
     },
     {
-      "name": "韩小韩API",
-      "link": "https://api.vvhan.com",
-      "avatar": "https://api.vvhan.com/static/images/logo.webp",
-      "descr": "免费Web API数据接口调用服务平台."
+      "name": "月光下的过客",
+      "link": "https://panjinye.com",
+      "avatar": "https://panjinye.com/upload/Ficor.png",
+      "descr": "重新站起来 再次出发"
+    },
+    {
+      "name": "静·夜·思",
+      "link": "https://blog.ficor.net",
+      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "descr": "网页中的诗意与宁静"
     }
   ]
 }
