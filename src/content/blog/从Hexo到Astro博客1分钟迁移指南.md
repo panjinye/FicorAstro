@@ -1,8 +1,8 @@
 ---
 title: "从Hexo到Astro博客1分钟迁移指南"
-categories: Share
-tags: ["Hexo", "Astro", "静态博客", "迁移"]
-id: "hexo-to-astro-1-minute-migration-guide"
+categories: 分享
+tags: ["Hexo", "Astro", "静态博客"]
+id: "hexo-to-astro"
 date: 2025-04-07 17:20:46
 cover: "https://i0.wp.com/uxiaohan.github.io/v2/2025/04/1744018738123.webp"
 ---
