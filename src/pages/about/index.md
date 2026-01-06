@@ -50,25 +50,20 @@ type: "about"
   <a href="https://www.linux.org/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" /></a>
   <a href="https://www.nginx.com" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx" /></a>
   <a href="https://www.docker.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
-  <a href="https://vuejs.org/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js" /></a>
   <a href="https://vitejs.dev/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></a>
-  <a href="https://webpack.js.org" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack" /></a>
-  <a href="https://www.electronjs.org" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" alt="Electron" /></a>
-  <a href="https://expressjs.com" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" /></a>
   <a href="https://tailwindcss.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" /></a>
-  <a href="https://www.sqlite.org/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" /></a>
   <a href="https://code.visualstudio.com/" target="_blank" rel="noopener nofollow"><Image width="1" height="1" src="/assets/images/lazy-loading.webp" data-vh-lz-src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" /></a>
 </div>
 
 ## 小站点
 
-|     主&emsp;页      |       <https://www.4ce.cn>        |
+|     主&emsp;页      |       <https://ficor.net>        |
 | :-----------------: | :-------------------------------: |
-|   **博&emsp;客**    |    **<https://www.vvhan.com>**    |
-|  **Web&emsp;API**   |    **<https://api.vvhan.com>**    |
-|  **Han Analytics**  | **<https://analytics.vvhan.com>** |
-| **Cloudflare 优选** |    **<https://cf.vvhan.com>**     |
+|   **博&emsp;客**    |    **<https://linglingtu.com>**    |
+|  **Typecho**   |    **<https://blog.ficor.net>**    |
+|  **H a l o**  | **<https://panjinye.com>** |
+| **历&emsp;史** |    **<https://history.ficor.net>**     |
 
 ## 联系我
 

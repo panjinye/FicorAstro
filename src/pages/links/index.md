@@ -13,8 +13,8 @@ type: "links"
 :::
 
 ```yaml
-name: 韩小韩博客
-link: https://www.vvhan.com/
-avatar: https://q1.qlogo.cn/g?b=qq&nk=1655466387&s=640
-desc: 运气是计划之外的东西.
+name: 荒野菲克
+link: https://linglingtu.com
+avatar: https://img.ficor.net/uploads/2025/11/691448c231589.webp
+desc: 在路上的思绪与脚印
 ```
