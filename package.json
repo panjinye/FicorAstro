@@ -48,5 +48,9 @@
       "sharp",
       "swup"
     ]
+  },
+  "overrides": {
+    "rollup-plugin-terser": "npm:@rollup/plugin-terser@latest",
+    "sourcemap-codec": "@jridgewell/sourcemap-codec" 
   }
 }
