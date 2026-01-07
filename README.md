@@ -334,7 +334,7 @@ export default {
     // Twikoo 评论
     Twikoo: {
       enable: false,
-      envId: ''
+      envId: 'https://twikoo.linglingtu.com'
     },
     // Waline 评论
     Waline: {
