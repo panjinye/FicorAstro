@@ -2,12 +2,12 @@
 <section class="vh-comment"></section>
 <script>
 	// 环境id
-	const TwikooEnvId = "";
+	const TwikooEnvId = "https://twikoo.linglingtu.com";
 	// 评论组件 dom
 	const commentDOM = ".vh-comment";
 	document.addEventListener("astro:page-load", async () => {
 		if (!document.querySelector(commentDOM) || !TwikooEnvId) return;
-		await LoadScript("https://registry.npmmirror.com/twikoo/1.6.41/files/dist/twikoo.all.min.js");
+		await LoadScript("https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.all.min.js");
 		twikoo.init({ envId: TwikooEnvId, el: commentDOM });
 	});
 	// 加载外部脚本
