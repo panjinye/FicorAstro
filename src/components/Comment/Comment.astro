@@ -1,23 +1,195 @@
 <!-- Comment.astro -->
-<section class="vh-comment"></section>
-<script>
-	// 环境id
-	const TwikooEnvId = "https://twikoo.linglingtu.com";
-	// 评论组件 dom
-	const commentDOM = ".vh-comment";
-	document.addEventListener("astro:page-load", async () => {
-		if (!document.querySelector(commentDOM) || !TwikooEnvId) return;
-		await LoadScript("https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.all.min.js");
-		twikoo.init({ envId: TwikooEnvId, el: commentDOM });
-	});
-	// 加载外部脚本
-	const LoadScript = src => {
-		return new Promise((resolve, reject) => {
-			const script = document.createElement("script");
-			script.src = src;
-			script.onload = () => resolve(script);
-			script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
-			document.head.appendChild(script);
-		});
-	};
+<section class="vh-comment" style="display: none;"></section>
+
+<!-- 关键：提前预加载Twikoo图标样式，强制覆盖所有冲突 -->
+<style is:global>
+  /* 1. 强制容器基础样式，隔绝全局污染 */
+  .vh-comment {
+    min-height: 300px;
+    padding: 24px;
+    margin: 20px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  }
+
+  /* 2. 预定义Twikoo图标样式（核心解决图标错乱） */
+  .vh-comment [class^="tk-icon-"],
+  .vh-comment [class*=" tk-icon-"] {
+    display: inline-block !important;
+    width: 1em !important;
+    height: 1em !important;
+    stroke-width: 0 !important;
+    stroke: currentColor !important;
+    fill: currentColor !important;
+    vertical-align: middle !important;
+    font-size: 16px !important;
+  }
+
+  /* 3. 强制头像样式，避免尺寸错乱 */
+  .vh-comment .tk-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: none !important;
+    margin-right: 10px !important;
+  }
+
+  /* 4. 按钮样式兜底，避免变形 */
+  .vh-comment .tk-btn {
+    padding: 4px 12px !important;
+    border-radius: 4px !important;
+    border: 1px solid #e5e7eb !important;
+    background: #fff !important;
+    color: #333 !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    height: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 5. 编辑器区域样式重置 */
+  .vh-comment .tk-editor {
+    border: 1px solid #e5e7eb !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+  }
+</style>
+
+<script is:inline client:load>
+  if (!window.TwikooManager) {
+    window.TwikooManager = {
+      config: {
+        envId: "https://twikoo.linglingtu.com",
+        commentDOM: ".vh-comment",
+        scriptUrl: "https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"
+      },
+      state: {
+        scriptLoaded: false,
+        initLock: false
+      },
+
+      // 新增：预加载Twikoo样式文件（优先于脚本加载）
+      loadStyle: async function() {
+        // 预加载Twikoo核心样式，避免动态注入延迟
+        if (document.querySelector('link[href*="twikoo.min.css"]')) return;
+        
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.css';
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+        
+        // 等待样式加载完成（最多等1秒）
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      },
+
+      loadScript: async function() {
+        if (this.state.scriptLoaded) return Promise.resolve();
+        
+        return new Promise((resolve, reject) => {
+          const existingScript = document.querySelector(`script[src="${this.config.scriptUrl}"]`);
+          if (existingScript) {
+            this.state.scriptLoaded = true;
+            return resolve(existingScript);
+          }
+
+          const script = document.createElement("script");
+          script.src = this.config.scriptUrl;
+          script.crossOrigin = "anonymous";
+          script.onload = () => {
+            this.state.scriptLoaded = true;
+            resolve(script);
+          };
+          script.onerror = () => reject(new Error(`Failed to load script: ${this.config.scriptUrl}`));
+          document.head.appendChild(script);
+        });
+      },
+
+      init: async function() {
+        if (this.state.initLock) return;
+        this.state.initLock = true;
+
+        const container = document.querySelector(this.config.commentDOM);
+        if (!container || !this.config.envId) {
+          console.warn("Twikoo 容器或环境ID不存在");
+          this.state.initLock = false;
+          return;
+        }
+
+        try {
+          // 步骤1：先加载样式（核心！样式优先于脚本）
+          await this.loadStyle();
+
+          // 步骤2：显示加载提示，避免原始DOM暴露
+          container.innerHTML = '<p style="text-align: center; padding: 20px; font-size: 14px;">评论区加载中...</p>';
+          container.style.display = "block";
+
+          // 步骤3：加载脚本
+          await this.loadScript();
+          
+          // 步骤4：销毁旧实例
+          if (window.twikoo && window.twikoo.destroy) {
+            await window.twikoo.destroy(container).catch(() => {});
+          }
+
+          // 步骤5：初始化Twikoo，强制指定图标模式
+          await window.twikoo.init({
+            envId: this.config.envId,
+            el: this.config.commentDOM,
+            url: window.location.href,
+            id: window.location.pathname,
+            theme: "light",
+            // 新增：强制使用inline svg图标，避免字体图标加载延迟
+            iconMode: "svg"
+          });
+
+          // 步骤6：双重强制重绘（解决样式未生效）
+          container.style.display = "none";
+          // 延长重绘延迟，确保样式完全注入
+          setTimeout(() => {
+            container.style.display = "block";
+            // 额外触发一次样式重计算
+            container.offsetHeight; // 读取布局属性，强制浏览器重排
+          }, 200);
+
+          console.log("Twikoo 初始化成功");
+        } catch (error) {
+          console.error("Twikoo 初始化失败：", error);
+          container.innerHTML = '<p style="color: #f56c6c; text-align: center; padding: 20px; font-size: 14px;">评论区加载失败，请刷新页面重试</p>';
+          container.style.display = "block";
+        } finally {
+          this.state.initLock = false;
+        }
+      },
+
+      triggerInit: function() {
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+          this.init();
+        } else {
+          document.addEventListener("DOMContentLoaded", () => this.init());
+        }
+      }
+    };
+
+    // 首次触发
+    window.TwikooManager.triggerInit();
+    // 路由切换触发
+    document.addEventListener("astro:page-load", () => {
+      window.TwikooManager.state.initLock = false;
+      window.TwikooManager.init();
+    });
+    // 兜底触发（延长延迟，确保DOM完全就绪）
+    setTimeout(() => window.TwikooManager.init(), 300);
+  }
 </script>

@@ -27,3 +27,4 @@ test/
 .edgeone/*
 .tef_dist/*
   
+.vercel

@@ -2,10 +2,12 @@
 import { getDescription, fmtTime } from "@/utils/index";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
+
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
 	return posts.map((post: any) => ({ params: { article: post.data.id }, props: post }));
 }
+
 // 处理文章内容
 const post: any = Astro.props;
 // 获取封面图
@@ -39,6 +41,10 @@ import GoogleAd from "@/components/GoogleAd/GoogleAd.astro";
 import "@/styles/Article.less";
 // 文章内容基础样式
 import "@/styles/ArticleBase.less";
+
+// 新增：定义文章唯一标识（传给评论组件，确保Twikoo评论归属正确）
+const articleUniqueId = post.data.id || Astro.url.pathname;
+const articleTitle = post.data.title;
 ---
 
 <Layout title={post.data.title} keywords={post.data.tags} description={description} pagecover={ARTICLE_COVER}>
@@ -76,7 +82,7 @@ import "@/styles/ArticleBase.less";
 			</section>
 		</main>
 		<footer>
-			<!-- 上一篇下一批 -->
+			<!-- 上一篇下一篇 -->
 			<PrevNextArticle prev={prev} next={next} />
 			<!-- 打赏组件 -->
 			<Reward />
@@ -84,7 +90,18 @@ import "@/styles/ArticleBase.less";
 			<Copyright site={Site} id={post.data.id} title={post.data.title} sitename={Title} time={fmtTime(post.data.date, "YYYY-MM-DD A")} auther={Author} />
 			<!-- 底部谷歌广告 -->
 			{GoogleAds.ad_Client && GoogleAds.articleAD_Slot && <GoogleAd className="vh-article-ad" slotID={GoogleAds.articleAD_Slot} />}
+			
+			<!-- 评论区：关键修改 - 传入文章唯一标识和标题，确保Twikoo绑定正确 -->
+			{/* 增加兜底：如果checkComment()返回false但开发环境强制显示评论区，方便调试 */}
+			{(checkComment() || import.meta.env.DEV) && (
+				<section class="vh-comment-wrapper" style={{ marginTop: "2rem" }}>
+					<Comment 
+						client:load  {/* 强制客户端加载，关键！确保评论组件脚本执行 */}
+						articleId={articleUniqueId} 
+						articleTitle={articleTitle}
+					/>
+				</section>
+			)}
 		</footer>
-		{checkComment() && <Comment />}
 	</article>
 </Layout>
