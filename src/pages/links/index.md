@@ -15,6 +15,6 @@ type: "links"
 ```yaml
 name: 荒野菲克
 link: https://linglingtu.com
-avatar: https://img.ficor.net/uploads/2025/11/691448c231589.webp
+avatar: https://linglingtu.com/assets/images/avatar.webp
 desc: 在路上的思绪与脚印
 ```

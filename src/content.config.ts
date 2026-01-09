@@ -18,5 +18,4 @@ const blog = defineCollection({
 		top: z.boolean().optional()
 	}),
 });
-
 export const collections = { blog };
