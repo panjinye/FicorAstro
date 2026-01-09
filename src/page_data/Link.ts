@@ -90,7 +90,7 @@ export default {
     {
       "name": "老张博客",
       "link": "https://laozhang.org",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "http://pic.laozhang.org/i/2023/04/07/642f72584c9a1.png",
       "descr": "生活琐记，技术折腾，乐在记录点滴与分享"
     },
     {
@@ -102,7 +102,7 @@ export default {
     {
       "name": "似水流年",
       "link": "https://my1981.cn",
-      "avatar": "https://images.my1981.cn/wp-content/uploads/2023/09/favicon.ico",
+      "avatar": "https://weavatar.com/avatar/65cd1f408c1cc0949b34d3cd2acad0cb5a2b8c362ebf31ca9ee0dc9edcc63e81?s=100&r=g",
       "descr": "如花美眷，怎敌得过似水流年"
     },
     {
@@ -126,13 +126,13 @@ export default {
     {
       "name": "Counting Stars💫",
       "link": "https://hux.ink",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "https://weavatar.com/avatar/d44fe4344f5b822fe55c92d04b874cbad2e22babd866c84a62d71afb0e86e9b5?d=letter&letter=%E8%90%BD",
       "descr": "欲买桂花同载酒，终不似，少年游"
     },
     {
       "name": "老T博客",
       "link": "https://lawtee.com",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "https://lawtee.com/images/favicon.png",
       "descr": "聚焦法律、科技和生活"
     },
     {
@@ -144,8 +144,8 @@ export default {
     {
       "name": "破袜子",
       "link": "https://pewae.com",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
-      "descr": "网页中的诗意与宁静"
+      "avatar": "https://pewae.com/wp-content/uploads/cropped-logo-20251231-1-270x270.png",
+      "descr": "一个脱离不了低级趣味的人"
     },
     {
       "name": "孤鬥",
@@ -156,7 +156,7 @@ export default {
     {
       "name": "Keyle's Blog",
       "link": "https://vrast.cn",
-      "avatar": "https://vrast.cn/uploads/favicon.jpg",
+      "avatar": "https://vrast.cn/favicon.ico",
       "descr": "记录一些偶尔冒出来转眼就会忘的灵感"
     },
     {
@@ -174,7 +174,7 @@ export default {
     {
       "name": "彬红茶日记",
       "link": "https://note.redcha.cn",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "https://note.redcha.cn/upload/favicon-256x256.png",
       "descr": "生活原本沉闷，但跑起来就有风。"
     },
     {
@@ -198,13 +198,13 @@ export default {
     {
       "name": "雅余",
       "link": "https://yayu.net",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "https://yayu.net/wp-content/themes/yayu/assets/images/icon.png",
       "descr": "茶余饭后，闲情雅致"
     },
     {
       "name": "灰常记忆",
       "link": "https://bestcherish.com",
-      "avatar": "https://bestcherish.com/wp-content/uploads/2025/03/2beae85e6924af1c.png",
+      "avatar": "https://bestcherish.com/image/favicon.svg",
       "descr": "记录生活 珍藏回忆"
     },
     {
@@ -228,13 +228,13 @@ export default {
     {
       "name": "缓坡日记",
       "link": "https://amrx.me/",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "https://thirdqq.qlogo.cn/g?b=qq&nk=160860446&s=100",
       "descr": "网页中的诗意与宁静"
     },
     {
       "name": "笔记星球",
       "link": "https://note-star.cn/",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
+      "avatar": "https://note-star.cn/shortcut/logo.ico",
       "descr": "网页中的诗意与宁静"
     },
     {
@@ -244,10 +244,10 @@ export default {
       "descr": "别为活命而败坏生存之根"
     },
     {
-      "name": "静·夜·思",
-      "link": "https://blog.ficor.net",
-      "avatar": "https://img.ficor.net/uploads/2025/11/6914480601006.webp",
-      "descr": "网页中的诗意与宁静"
+      "name": "我心向阳",
+      "link": "https://www.hollowman.cn",
+      "avatar": "https://www.hollowman.cn/favicon.png",
+      "descr": "看清生活的真相后依然热爱生活"
     }
   ]
 }
