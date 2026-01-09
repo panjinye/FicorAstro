@@ -28,3 +28,5 @@ test/
 .tef_dist/*
   
 .vercel
+node_modules/
+node_modules/
