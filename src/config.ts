@@ -10,7 +10,7 @@ export default {
   // 网站作者
   Author: 'Ficor',
   // 作者头像
-  Avatar: 'https://img.ficor.net/uploads/2025/11/691448c231589.webp',
+  Avatar: '/assets/images/avatar.webp',
   // 网站座右铭
   Motto: '在路上的思绪与脚印',
   // Cover 网站缩略图

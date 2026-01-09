@@ -12,6 +12,11 @@ import Comment from "@/components/Comment/Comment.astro";
 import "./ToolLayout.less";
 // 文章内容基础样式
 import "@/styles/ArticleBase.less";
+// 新增1：导入静态数据文件（关键：替换为你的 talkingData.js 实际路径，如 ./talkingData.js）
+import talkingData from "./talkingData.js";
+
+// 新增2：提取动态数据并做容错处理（避免数据异常报错，兼容 api 为空的场景）
+const dynamicList = Array.isArray(talkingData.data) ? talkingData.data : [];
 ---
 
 <Layout title={frontmatter.title || Title} description={Description} activeNav={frontmatter.type || "-"}>
@@ -21,7 +26,46 @@ import "@/styles/ArticleBase.less";
 			<p>{frontmatter.desc}</p>
 		</header>
 		<main><slot /></main>
-		<main class={`${frontmatter.type}-main main`}><section class="vh-space-loading"><span></span><span></span><span></span></section></main>
+		<!-- 修改核心：替换原有单纯的加载动画，实现「数据渲染 + 空数据/加载兜底」 -->
+		<main class={`${frontmatter.type}-main main`}>
+			<!-- 逻辑1：有动态数据时，遍历渲染所有条目（作者、头像、日期、标签、内容） -->
+			{dynamicList.length > 0 ? (
+				dynamicList.map((item, index) => (
+					<section key={index} class="vh-talking-item">
+						<!-- 头像：使用 vh-img-flex 类（符合项目要求），绑定数据中的头像地址 -->
+						<div class="vh-img-flex vh-blogger-avatar">
+							<img 
+								src={item.avatar} 
+								alt={`${item.author} 的头像`} 
+								title={item.author}
+							/>
+						</div>
+						
+						<!-- 动态内容区域：绑定作者和各类信息 -->
+						<div class="vh-talking-content-wrap">
+							<!-- 作者名称 -->
+							<h3 class="vh-blogger-name">{item.author}</h3>
+							<!-- 动态日期 -->
+							<p class="vh-talking-date">{item.date}</p>
+							<!-- 动态标签 -->
+							<div class="vh-talking-tags">
+								{item.tags && Array.isArray(item.tags) && item.tags.map((tag, tagIndex) => (
+									<span key={tagIndex} class="vh-talking-tag">{tag}</span>
+								))}
+							</div>
+							<!-- 动态核心内容 -->
+							<p class="vh-talking-content">{item.content}</p>
+						</div>
+					</section>
+				))
+			) : (
+				<!-- 逻辑2：无数据时，显示加载动画（保留你的原有加载样式） -->
+				<section class="vh-space-loading">
+					<span></span><span></span><span></span>
+				</section>
+			)}
+		</main>
 		{checkComment() && frontmatter.comment != false && <Comment />}
 	</section>
+	
 </Layout>

@@ -10,14 +10,17 @@ export default {
         "日常",
         "工作"
       ],
-      "content": "下班！"
-    },
-    {
-      "date": "2026-01-06 16:36:06",
+      "content": "这是怎么回事，头像和作者都改不了啊",
+      "author": "Ficor", 
+      "avatar": "/images/avatar.webp",
+      },
+    {  "date": "2026-01-06 16:36:06",
       "tags": [
         "日常"
       ],
-      "content": "记录第一条说说"
+      "content": "记录第一条说说",
+      "author": "Ficor", 
+      "avatar": "/images/avatar.webp",
     }
   ]
 }
