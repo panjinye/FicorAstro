@@ -14,7 +14,7 @@ export default {
   // 网站座右铭
   Motto: '在路上的思绪与脚印',
   // Cover 网站缩略图
-  Cover: '',
+  Cover: 'https://img.ficor.net/uploads/2026/01/69609f46711c1.webp',
   // 网站侧边栏公告 (不填写即不开启)
   Tips: '<p>欢迎光临我的博客 🎉</p><p>当你把历史的包袱放下，你就可以更好的拥抱未来</p>',
   // 首页打字机文案列表
@@ -64,10 +64,10 @@ export default {
     // 仅支持 SVG 且 SVG 需放在 public/assets/images/svg/ 目录下，填入文件名即可 <不需要文件后缀名>（封装了 SVG 组件 为了极致压缩 SVG）
     // 建议使用 https://tabler.io/icons 直接下载 SVG
     { text: 'Github', link: 'https://github.com/panjinye', icon: 'WebSite_github' },
-    { text: 'Mail', link: 'https://api.vvhan.com', icon: 'WebSite_api' },
-    { text: '每日热榜', link: 'https://hot.vvhan.com', icon: 'WebSite_hot' },
+    { text: 'Mail', link: 'https://mail.qq.com', icon: 'mail' },
+    { text: 'Rss', link: '/rss.xml', icon: 'Nav_rss' },
     { text: '菲克图床', link: 'https://img.ficor.net', icon: 'WebSite_img' },
-    { text: 'HanAnalytics', link: 'https://analytics.vvhan.com', icon: 'WebSite_analytics' },
+    { text: 'Mastodon', link: 'https://mastodon.social/@ficor', icon: 'brand-mastodon' },
   ],
   // 侧边栏展示
   AsideShow: {
