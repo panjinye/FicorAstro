@@ -23,7 +23,7 @@ export default {
     "Do one Thing at a Time, and Do Well.",
   ],
   // 网站创建时间
-  CreateTime: '2008-10-07',
+  CreateTime: '2007-10-07',
   // 顶部 Banner 配置
   HomeBanner: {
     enable: true,
@@ -110,9 +110,9 @@ export default {
   GoogleAds: {
     ad_Client: '', //ca-pub-xxxxxx
     // 侧边栏广告(不填不开启)
-    asideAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`,
+    asideAD_Slot: ``,
     // 文章页广告(不填不开启)
-    articleAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`
+    articleAD_Slot: ``
   },
   // 文章内赞赏码
   Reward: {
