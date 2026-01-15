@@ -34,6 +34,7 @@ cover: "https://www.jianguoyun.com/static/images/logo.png"
 ![手机端同步按钮](https://img.ficor.net/uploads/2026/01/6968a3b105e21.webp)
 ![手机端同步](https://img.ficor.net/uploads/2026/01/6968a3b10628a.webp)
 ![同步确认](https://img.ficor.net/uploads/2026/01/69688534291e5.webp)
+
 箭头是PC端和手机端的同步按钮，每次写完自己同步，也可以点击按钮手动同步，还是很方便的。
 
 全部文章写完后，点完同步，再点击发布到Wordpress就好了。
