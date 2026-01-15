@@ -1,0 +1,31 @@
+---
+title: "坚果云 x Obsidian 官方同步插件"
+categories: 分享
+tags: ["Astro", "Obsidian", "博客", "坚果云", "网站"]
+id: "nuts-obsidian"
+date: 2026-01-15 15:50:18
+cover: "https://www.jianguoyun.com/static/images/logo.png"
+---
+新的一年已经过去半个月了，好久没更新了，也是因为最近一直没有什么值得记录的。
+最近一直在折腾手头的工具，也一直在准备写一篇”技术“类的文章，分享一下。只是一直没行动。
+在使用了这么多笔记软件后，最终选择了用Obsidian来写博客。写完用插件直接同步网站，太方便了。也不用再专门在手机上下载App了。随时有想法或者想记录的内容，随时在手机上就可以记录加发布了。挺方便的，因为也不是随时都能有时间坐在电脑前，一本正经的打开网站编辑器，开始敲键盘。因为刚开始使用，好多功能和扩展都不熟悉，暂时只是敲字，后期优化还要在网站上继续。加入图片，链接之类的”锦上添花“的元素。
+现阶段只有两个插件，一个Wordpress，还有一个同步的插件坚果云 x Obsidian 官方同步插件Nutstore Sync。反正免费版够用了。官方的同步还要花点钱，暂时需求也不大。这里给博友们安利一下这个插件，个人感觉还是很好用的，全平台实时同步，在哪里都可以摸起设备就继续。
+- 打开 Obsidian，`设置` &gt; `第三方插件` &gt; `社区插件市场`。
+- 搜索 **`Nutstore Sync`**，点击安装并启用。
+- 在插件设置里登录方式选择单点登录，会弹出坚果云窗口，注册登录就好了。
+<img src="https://img.ficor.net/uploads/2026/01/6968847c865a5.webp" alt="6968847c865a5.webp" />
+跳转登录成功后检查连接，显示连接成功，就搞定了！
+<img src="https://img.ficor.net/uploads/2026/01/6968847c86615.webp" alt="6968847c86615.webp" />
+可以设置目录，冲突标记，实时同步，自己设置就OK了。
+<img src="https://img.ficor.net/uploads/2026/01/6968847c8996a.webp" alt="6968847c8996a.webp" />
+第一次同步，PC端点击左侧同步按钮→确认同步，移动端点击编辑界面右下角“☰”→开始同步→确认同步。
+<img src="https://img.ficor.net/uploads/2026/01/696886e26c133.webp" alt="696886e26c133.webp" />
+<img src="https://img.ficor.net/uploads/2026/01/6968853428921.webp" alt="6968853428921.webp" />
+<img src="https://img.ficor.net/uploads/2026/01/69688534276aa.webp" alt="69688534276aa.webp" />
+<img src="https://img.ficor.net/uploads/2026/01/69688534291e5.webp" alt="69688534291e5.webp" />
+箭头是PC端和手机端的同步按钮，每次写完自己同步，也可以点击按钮手动同步，还是很方便的。
+全部文章写完后，点完同步，再点击发布到Wordpress就好了。
+<img src="https://img.ficor.net/uploads/2026/01/6968847c897bb.webp" alt="6968847c897bb.webp" />
+<img src="https://img.ficor.net/uploads/2026/01/6968847c89856.webp" alt="6968847c89856.webp" />
+这就是我现在写博客的全部流程，很好的打字体验，Obsidian支持Markdown，虽然我还不是很熟悉Markdown语言，但是打完之后生成的文件可以直接复制到静态博客里，也是很方便的。
+最近也一直在折腾静态博客，后面慢慢再记录和分享吧。上面的介绍大概已经躺在我Obsidian仓库里快一个月了。这里就当我水一篇吧，哈哈。谁还没有懒的时候。

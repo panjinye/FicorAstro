@@ -1,6 +1,6 @@
 ---
 title: 我的第一篇Astro文章
-id: 第一篇Astro文章
+id: my-first-astro
 date: 2025-12-30 10:08:40
 tags: 
 - 文章
